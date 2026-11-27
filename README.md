@@ -19,21 +19,7 @@ Proyecto Android de la Unidad 2 de TI3042. El celular de la educadora controla l
 
 La aplicación identifica las lecturas de simulación. El porcentaje se deriva de un valor de 0 a 1023 y representa ruido simulado.
 
-## Montaje de Arduino Uno
 
-Abre **firmware/CaracolArduino/CaracolArduino.ino** en Arduino IDE, selecciona **Arduino Uno** y carga el sketch. Usa una matriz 8 × 8 con módulo MAX7219. Si tu matriz es de conexión directa, añade el controlador correspondiente para este montaje.
-
-| Componente | Conexión |
-| --- | --- |
-| Potenciómetro | Cursor en A0, extremos en 5 V y GND |
-| HC-05 | TXD a D2, RXD desde D3 mediante divisor a 3,3 V, tierra común |
-| MAX7219 | DIN en D4, CLK en D5, CS/LOAD en D6, alimentación de acuerdo con el módulo |
-| LED de alerta | D7 mediante resistencia limitadora y GND |
-| Zumbador activo | D8 y GND. Usar un transistor si requiere más corriente que la salida del Arduino |
-
-Verifica el voltaje de alimentación del HC-05 según la placa y configura el modo de datos UART a 9600 baudios. Cambia el PIN y el nombre de fábrica según el firmware del módulo. Usa resistencias de *pull-down* en las etapas de activación del LED y zumbador si el montaje lo requiere durante el reinicio.
-
-Arduino deja el caracol escondido en la matriz y apaga el LED de alerta y el zumbador al iniciar y a partir de tres segundos sin pulso válido. El firmware vuelve a operar después de **INICIO** y responde **LISTO**. Durante la operación usa **H** para el pulso y muestreo, **E,id** o **M,id** para las acciones, **A,id,resultado** para la confirmación y **T,secuencia,entrada,oculto,alerta,armado** para el estado.
 
 ## Estructura
 
