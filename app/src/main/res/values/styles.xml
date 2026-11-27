@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Caracol Interactivo</string>
+    <string name="reveal_password">Mostrar contraseña</string>
+    <string name="simulated_level">Nivel simulado: %1$d %%</string>
+    <string name="live_mode">En vivo</string>
+    <style name="Theme.Caracol" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#493C87</item>
+        <item name="android:windowBackground">#F8F6FB</item>
+        <item name="android:statusBarColor">#F8F6FB</item>
+        <item name="android:navigationBarColor">#252137</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
